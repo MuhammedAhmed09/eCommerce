@@ -8,7 +8,7 @@ const Home = ({propsOnProducts , propsOnCategories , propsOnProductsInCat}) => {
     return (
         <>
         <Slide />
-        <Categories propsOnProducts={propsOnProducts} propsOnCategories={propsOnCategories} propsOnProductsInCat={propsOnProductsInCat} />
+        <Categories propsOnCategories={propsOnCategories} propsOnProductsInCat={propsOnProductsInCat} />
         <ProductList productList={propsOnProducts} />
         </>
     )
