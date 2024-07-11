@@ -3,14 +3,14 @@ import { Card ,  Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ProductList = ({productList}) => {
-    const products = productList;
+    const allProducts = productList;
 
     return (
         //fetching on products list
         <Container className='card-list'>
             <h2>Our Products</h2>
             <Row>
-                {products.map((product) => (
+                {allProducts.map((product) => (
                 <Col lg={3} md={6} sm={12} key={product.id}>
                 <Card className='card'>
                     <Card.Img 

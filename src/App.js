@@ -13,22 +13,41 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const api_key = 'https://fakestoreapi.com/products';
-  const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+
+const allProduct = () => {
+  fetch(api_key)
+  .then(res => res.json())
+  .then((data) =>setAllProducts(data));
+};
+
+const category = () => {
+  fetch(`${api_key}/categories`)
+  .then((res) => res.json())
+  .then((date) => setCategories(date) );
+};
+
+const getProductsInCat = (catNam) => {
+  fetch(`${api_key}/category/${catNam}`)
+  .then(res=>res.json())
+  .then(json=>setAllProducts(json))
+}
 
   useEffect(() => {
-    fetch(api_key)
-    .then(res => res.json())
-    .then((data) =>setProducts(data));
+    allProduct();
+    category();
   }, []);
 
-  console.log(products);
+  console.log(allProducts);
+  console.log(categories);
 
   return (
     <>
     <BrowserRouter>
     <NavBar />
       <Routes>
-        <Route path='/' element={<Home propsOnProducts={products} />} />
+        <Route path='/' element={<Home propsOnCategories={categories} propsOnProducts={allProducts}  propsOnProductsInCat={getProductsInCat} />} />
         <Route path='About' element={<About />} />
         <Route path='Cart' element={<Cart />} />
         <Route path='product/:productId' element={<Details />} />
