@@ -51,6 +51,10 @@
 }
 
 /* categories */
+.cat h1 {
+    text-align: center;
+    margin: 35px;
+}
 .cat .btn {
     background-color: #e4e4e4cb;
 }

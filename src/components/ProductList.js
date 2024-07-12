@@ -8,7 +8,6 @@ const ProductList = ({productList}) => {
     return (
         //fetching on products list
         <Container className='card-list'>
-            <h2>Our Products</h2>
             <Row>
                 {allProducts.map((product) => (
                 <Col lg={3} md={6} sm={12} key={product.id}>

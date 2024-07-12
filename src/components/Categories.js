@@ -8,6 +8,7 @@ const Categories = ({ propsOnCategories , propsOnProductsInCat}) => {
     return (
         <>
         <Container className='cat'>
+            <h1>Categories</h1>
             {categories.map((cat) => {
                 return (
 
