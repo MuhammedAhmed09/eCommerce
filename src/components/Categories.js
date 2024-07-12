@@ -7,7 +7,7 @@ const Categories = ({ propsOnCategories , propsOnProductsInCat}) => {
     const getProductsInCat = propsOnProductsInCat;
     return (
         <>
-        <Container>
+        <Container className='cat'>
             {categories.map((cat) => {
                 return (
 
@@ -15,7 +15,7 @@ const Categories = ({ propsOnCategories , propsOnProductsInCat}) => {
                     onClick={() => {
                         getProductsInCat(cat)
                     }} 
-                    className='btn btn-info' 
+                    className='btn' 
                     key={cat}
                     >
                         {cat}

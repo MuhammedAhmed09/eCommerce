@@ -9,6 +9,7 @@ import Details from './components/Details';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
+import Footer from './Footer';
 
 function App() {
 
@@ -52,6 +53,7 @@ const getProductsInCat = (catNam) => {
         <Route path='Cart' element={<Cart />} />
         <Route path='product/:productId' element={<Details />} />
       </Routes>
+    <Footer />
     </BrowserRouter>
     
     </>

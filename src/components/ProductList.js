@@ -18,13 +18,13 @@ const ProductList = ({productList}) => {
                     variant="top" 
                     src={product.image}                     
                     />
-                    <Card.Body>
+                    <Card.Body className='cart-body'>
                         <Card.Title className='card-title'>{product.title}</Card.Title>
                         <Card.Text className='description'>
                         {product.description}
                         </Card.Text>
-                        <Link className='btn btn-primary' to={`/product/${product.id}`} variant="primary">More Details</Link>
-                        <Link className=' m-1 p-2 btn btn-primary' variant="primary">Add to Cart</Link>
+                        <Link className='btn ' to={`/product/${product.id}`} variant="primary">More Details</Link>
+                        <Link className=' btn  m-1 p-2 ' variant="primary">Add to Cart</Link>
                     </Card.Body>
                 </Card>
                 </Col>

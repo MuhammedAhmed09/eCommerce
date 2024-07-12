@@ -9,7 +9,7 @@ const NavBar = () => {
     
     return (
         <>
-        <Navbar expand="lg" className="bg-body-tertiary navbar">
+        <Navbar expand="lg" className="navbar">
         <Container>
                 <Link style={{fontSize: '22px'}} className='link' to="/">store | ecommerce</Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
