@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #0068cf6e;
+    background-color: #e4e4e4cb;
 }
 .container-sild .img-hieght {
     height: 90vh;
@@ -18,7 +18,6 @@
 }
 
 /* Cart */
-
 .product-h2 {
     text-align: center;
     padding: 20px;
@@ -48,22 +47,30 @@
     overflow: hidden;
 }
 .card-list .btn {
-    background-color: #0068cf6e;
+    background-color: #e4e4e4cb;
 }
-
-
 
 /* categories */
 .cat .btn {
-    background-color: #0068cf6e;
+    background-color: #e4e4e4cb;
 }
 
-
+.details img {
+    width: 100%;
+    height: 60%;
+    margin-top: 20vh;
+}
+.details .right {
+    margin-top: 25vh;
+}
+.details .right span {
+    color: hwb(0 4% 95% / 0.726);
+}
 
 /* footer css */
 .foot-up {
     margin-top: 30vh;
-    background-color: #0068cf6e;
+    background-color: #e4e4e4cb;
     padding: 10vh 0;
 }
 .foot-up h3 {
