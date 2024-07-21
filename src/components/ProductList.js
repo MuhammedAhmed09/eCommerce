@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card ,  Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { ProductContext } from '../AppContext';
 
-const ProductList = ({productList}) => {
+const ProductList = ({ productList }) => {
     const allProducts = productList;
+    const addToCart = useContext(ProductContext);
+    const handleAddToCart = (product) => {
+        addToCart(product);
+    }
 
+    
     return (
-        //fetching on products list
+        //map on products
         <Container className='card-list'>
             <Row>
                 {allProducts.map((product) => (
@@ -23,7 +29,7 @@ const ProductList = ({productList}) => {
                         {product.description}
                         </Card.Text>
                         <Link className='btn ' to={`/product/${product.id}`} variant="primary">More Details</Link>
-                        <Link className=' btn  m-1 p-2 ' variant="primary">Add to Cart</Link>
+                        <Link className='btn  m-1 p-2' onClick={() => {handleAddToCart(product)}} variant="primary">Add to Cart</Link>
                     </Card.Body>
                 </Card>
                 </Col>

@@ -2,6 +2,8 @@ import React from 'react'
 import Slide from './components/Slide';
 import ProductList from './components/ProductList';
 import Categories from './components/Categories';
+import CopyRight from "./CopyRight"
+import Footer from "./Footer"
 
 
 const Home = ({propsOnProducts , propsOnCategories , propsOnProductsInCat}) => {
@@ -10,6 +12,8 @@ const Home = ({propsOnProducts , propsOnCategories , propsOnProductsInCat}) => {
         <Slide />
         <Categories propsOnCategories={propsOnCategories} propsOnProductsInCat={propsOnProductsInCat} />
         <ProductList productList={propsOnProducts} />
+        <Footer />
+        <CopyRight />
         </>
     )
 }

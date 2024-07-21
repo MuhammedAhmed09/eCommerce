@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
 
+
 const Details = () => {
     const api = 'https://fakestoreapi.com/products';
     const [product, setProduct] = useState({});
     const params = useParams();
     
-
+//fetching on products list
     useEffect(() => {
         fetch(`${api}/${params.productId}`)
         .then((res) => res.json())

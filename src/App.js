@@ -10,6 +10,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import Footer from './Footer';
+import ProductProvider from './AppContext';
 
 function App() {
 
@@ -46,14 +47,16 @@ const getProductsInCat = (catNam) => {
   return (
     <>
     <BrowserRouter>
+    <ProductProvider>
     <NavBar />
       <Routes>
         <Route path='/' element={<Home propsOnCategories={categories} propsOnProducts={allProducts}  propsOnProductsInCat={getProductsInCat} />} />
         <Route path='About' element={<About />} />
-        <Route path='Cart' element={<Cart />} />
+        <Route path='Cart' element={<Cart />} /> 
         <Route path='product/:productId' element={<Details />} />
       </Routes>
-    <Footer />
+    
+    </ProductProvider>
     </BrowserRouter>
     
     </>
