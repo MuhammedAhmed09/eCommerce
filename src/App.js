@@ -9,7 +9,6 @@ import Details from './components/Details';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
-import Footer from './Footer';
 import ProductProvider from './AppContext';
 
 function App() {

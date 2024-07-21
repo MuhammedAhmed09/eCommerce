@@ -15,7 +15,7 @@ const CopyRight = () => {
             </Col>
             <Col lg={2} bsm={12} className='icons'>
                 <Link className='link' to="https://www.facebook.com/19muhammad19"><FaFacebookF /></Link>
-                <Link className='link' to="https://github.com/Mushsd"><FaGithubSquare /></Link>
+                <Link className='link' to="https://github.com/MuhammedAhmed09"><FaGithubSquare /></Link>
                 <Link className='link' to="https://www.linkedin.com/in/muhammad-a-ragab-a29078307"><FaLinkedinIn /></Link>
             </Col>
         </Row>
